@@ -13,8 +13,7 @@ ENV HOME /home/${NB_USER}
 # tidy up
 
 USER root
-RUN mkdir .scratch && mv Notebooks miller_alaskamoho_srl2018-src scripts .scratch
-RUN mv .scratch/Notebooks/* ${HOME}
+RUN mkdir .scratch && mv miller_alaskamoho_srl2018-src .scratch
 RUN chown -R ${NB_UID} ${HOME}
 
 USER ${NB_USER}
