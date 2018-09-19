@@ -18,4 +18,5 @@ RUN chown -R ${NB_UID} ${HOME}
 
 USER ${NB_USER}
 
+ENTRYPOINT ["/usr/local/bin/tini", "--", "/usr/local/bin/xvfbrun.sh"]
 CMD ./run-jupyter.sh
