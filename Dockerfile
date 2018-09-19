@@ -13,7 +13,9 @@ ENV HOME /home/${NB_USER}
 # tidy up
 
 USER root
-RUN mkdir .scratch && mv miller_alaskamoho_srl2018-src .scratch
+# RUN mkdir .scratch && mv miller_alaskamoho_srl2018-src .scratch
 RUN chown -R ${NB_UID} ${HOME}
 
 USER ${NB_USER}
+
+CMD ./run-jupyter.sh
