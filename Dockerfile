@@ -14,6 +14,11 @@ ENV HOME /home/${NB_USER}
 
 USER root
 RUN mkdir .scratch && mv miller_alaskamoho_srl2018-src workspace .scratch
+RUN mv Notebooks/A*ipynb .
+RUN mv Notebooks/Figures .
+RUN mv Notebooks/ShadedRelief .
+RUN mv Notebooks/ModelConstruction .
+
 ADD run-jupyter.sh run-jupyter.sh
 RUN chown -R ${NB_UID} ${HOME}
 
