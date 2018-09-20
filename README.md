@@ -1,5 +1,5 @@
 
-Miller & Moresi - Alaska Moho Model: demo on `mybinder.org`
+Miller & Moresi - Alaska Moho: demo on mybinder.org
 ==================================================
 
 ---
@@ -12,16 +12,18 @@ maps are in the notebooks supplied with this package_
 
 ---
 
-This package is a self-consistent packaging of the Miller & Moresi Alaska Moho model which
-is available in a docker distribution. This repository repackages that distribution
+The [`miller_alaskamoho_srl2018`](https://pypi.org/project/miller_alaskamoho_srl2018/) python package is a self-consistent packaging of the
+Miller & Moresi Alaska Moho model which
+is also available in a docker distribution.
+This repository repackages the docker distribution
 very slightly to match the requirements of `mybinder.org`
 
 It contains
 
    - This information
    - Scripts to install documentation and examples
-   - Jupyter notebooks (like this one but with active code)
-   - A docker container setup that can serve notebooks with all relevant software, data and dependencies
+   - Jupyter notebooks for manipulating the data
+   - Jupyter notebooks for recreating our work
 
 A demo is available on [mybinder.org](http://mybinder.org) - open the notebook `A0-Index.ipynb`
 to begin:
