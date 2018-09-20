@@ -13,7 +13,12 @@ ENV HOME /home/${NB_USER}
 # tidy up
 
 USER root
-RUN mkdir .scratch && mv miller_alaskamoho_srl2018-src workspace .scratch
+
+RUN pip install --no-cache-dir --upgrade notebook==5.*
+
+RUN mkdir .scratch
+RUN mv miller_alaskamoho_srl2018-src .scratch || true
+RUN mv workspace .scratch || true
 RUN mv Notebooks/A*ipynb .
 RUN mv Notebooks/Figures .
 RUN mv Notebooks/ShadedRelief .
