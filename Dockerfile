@@ -16,7 +16,7 @@ USER root
 
 RUN pip install --no-cache-dir --upgrade notebook==5.*
 
-RUN mkdir .scratch
+RUN mkdir .scratch || true
 RUN mv miller_alaskamoho_srl2018-src .scratch || true
 RUN mv workspace .scratch || true
 RUN mv Notebooks/A*ipynb .
@@ -24,7 +24,15 @@ RUN mv Notebooks/Figures .
 RUN mv Notebooks/ShadedRelief .
 RUN mv Notebooks/ModelConstruction .
 
+## This is not used by binder
 ADD run-jupyter.sh run-jupyter.sh
+
+## Set config options ??
+RUN rm -rf .jupyter || true
+RUN mkdir  .jupyter
+ADD jupyter_notebook_config.py .jupyter/jupyter_notebook_config.py
+
+
 RUN chown -R ${NB_UID} ${HOME}
 
 USER ${NB_USER}
