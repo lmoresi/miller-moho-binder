@@ -4,7 +4,7 @@
 # for details
 
 # SHA tagging would be better
-FROM lmoresi/miller-alaska-moho-srl2018:1.1
+FROM lmoresi/miller-alaska-moho-srl2018:1.2
 
 ENV NB_USER jovyan
 ENV NB_UID 1000
@@ -24,8 +24,10 @@ RUN mv Notebooks/Figures .
 RUN mv Notebooks/ShadedRelief .
 RUN mv Notebooks/ModelConstruction .
 
-## This is not used by binder
-ADD run-jupyter.sh run-jupyter.sh
+## This is not used by binder at present (but for testing, it is helpful to have
+## the notebook launched by default (but we hide this file !)
+
+ADD run-jupyter.sh .run-jupyter.sh
 
 ## Set config options ??
 RUN rm -rf .jupyter || true
@@ -38,4 +40,4 @@ RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
 ENTRYPOINT ["/usr/local/bin/tini", "--", "/usr/local/bin/xvfbrun.sh"]
-CMD ./run-jupyter.sh
+CMD ./.run-jupyter.sh

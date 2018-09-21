@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
 ###############################
-## On mybinder.org, the CMD is over-ridden (I think)
-##
+## On mybinder.org, the CMD is over-ridden
+## and the starting notebook should instead
+## be added to the configuration file
+###############################
 
 ENV START_NB="A0-Index.ipynb"
 
