@@ -2,6 +2,8 @@
 Miller & Moresi - Alaska Moho: demo on mybinder.org
 ==================================================
 
+<!-- VERSION 1.2: September 24, 2018 -->
+
 ---
 
 ![Image showing map of results](https://www.dropbox.com/s/5s6uk6m3dlg5ysq/MohoSurfaceGradient-ClusteredGrids.png?raw=1)
