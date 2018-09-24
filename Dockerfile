@@ -4,7 +4,7 @@
 # for details
 
 # SHA tagging would be better
-FROM lmoresi/miller-alaska-moho-srl2018:1.2
+FROM lmoresi/miller-alaska-moho-srl2018:1.2.1
 
 ENV NB_USER jovyan
 ENV NB_UID 1000
