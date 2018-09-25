@@ -6,7 +6,7 @@
 ## be added to the configuration file
 ###############################
 
-ENV START_NB="A0-Index.ipynb"
+export START_NB="A0-Index.ipynb"
 
 PASS=${NB_PASSWD:-""}
 OPEN=${START_NB:-""}
