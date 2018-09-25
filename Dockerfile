@@ -3,8 +3,8 @@
 # https://mybinder.readthedocs.io/en/latest/dockerfile.html#when-should-you-use-a-dockerfile
 # for details
 
-# SHA tagging would be better - to tag the publication version
-FROM lmoresi/miller-alaska-moho-srl2018:1.0
+# SHA tagging of the publication version
+FROM lmoresi/miller-alaska-moho-srl2018@sha256:f599154159eb342edd0bf71eb31953d1ed2dba15b1ee928f062bce7ac384414b
 
 ENV NB_USER jovyan
 ENV NB_UID 1000
