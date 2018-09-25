@@ -30,4 +30,4 @@ It contains
 A demo is available on [mybinder.org](http://mybinder.org) - open the notebook `A0-Index.ipynb`
 to begin:
 
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/lmoresi/miller-moho-binder/master)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/lmoresi/miller-moho-binder/publication)
